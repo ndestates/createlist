@@ -1,1 +1,119 @@
-{"name":"44db9e45-6316-468d-8951-7ac2544afa23","id":"/providers/Microsoft.Flow/flows/44db9e45-6316-468d-8951-7ac2544afa23","type":"Microsoft.Flow/flows","properties":{"apiId":"/providers/Microsoft.PowerApps/apis/shared_logicflows","displayName":"Button -> Send an HTTP request to SharePoint","definition":{"metadata":{"workflowEntityId":null,"processAdvisorMetadata":null,"flowChargedByPaygo":null,"flowclientsuspensionreason":"None","flowclientsuspensiontime":null,"flowclientsuspensionreasondetails":null,"creator":{"id":"201b9cdc-3701-4358-8151-de8e81c9e4f2","type":"User","tenantId":"412be96d-25c8-46fa-9676-9b68faa22272"},"provisioningMethod":"FromDefinition","failureAlertSubscription":true,"clientLastModifiedTime":"2023-07-23T16:42:14.8240918Z"},"$schema":"https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#","contentVersion":"1.0.0.0","parameters":{"$connections":{"defaultValue":{},"type":"Object"},"$authentication":{"defaultValue":{},"type":"SecureObject"}},"triggers":{"manual":{"metadata":{"operationMetadataId":"f49febe0-4d36-44da-862f-6ce407d8353c"},"type":"Request","kind":"Button","inputs":{"schema":{"type":"object","properties":{},"required":[]}}}},"actions":{"Send_an_HTTP_request_to_SharePoint":{"runAfter":{},"metadata":{"operationMetadataId":"ab65ce20-495c-460f-8408-c8a0f98c7dca"},"type":"OpenApiConnection","inputs":{"host":{"apiId":"/providers/Microsoft.PowerApps/apis/shared_sharepointonline","connectionName":"shared_sharepointonline","operationId":"HttpRequest"},"parameters":{"dataset":"https://vgmgw.sharepoint.com/sites/Marketing","parameters/method":"GET","parameters/uri":"_api/site/id"},"authentication":{"value":"@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']","type":"Raw"}}},"Send_an_HTTP_request_to_SharePoint_2":{"runAfter":{"Send_an_HTTP_request_to_SharePoint":["Succeeded"]},"metadata":{"operationMetadataId":"18683f75-f4c5-44f9-9a18-0366a0b3def9"},"type":"OpenApiConnection","inputs":{"host":{"apiId":"/providers/Microsoft.PowerApps/apis/shared_sharepointonline","connectionName":"shared_sharepointonline","operationId":"HttpRequest"},"parameters":{"dataset":"https://vgmgw.sharepoint.com/sites/Marketing","parameters/method":"POST","parameters/uri":"/_api/v2.0/sites/@{outputs('Send_an_HTTP_request_to_SharePoint')?['body']?['d/id']}/lists/","parameters/body":"{\n  \"displayName\": \"Test_List\",\n  \"columns\": [\n    {\n      \"name\": \"Reference\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Name\",\n      \"text\": { }\n    },\n   {\n      \"name\": \"House Name\",\n      \"text\": { }\n    },\n    { \n    \"name\": \"url\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n }\n},\n { \n    \"name\": \"Virtual Tour URL\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n { \n    \"name\": \"What3Words\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{\n      \"name\": \"Address City\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Region\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Description\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Price Type\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Price\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Address Country\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Listing Type\",\n      \"choice\": { \n\"allowTextEntry\": \"false\" ,\n      \"choices\": [\n       \"rent\",\n       \"sale\"\n ],\n\"displayAs\": \"dropDownMenu\"\n          }\n    },\n{\n      \"name\": \"Address 1\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Availability\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Latitude\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Longitude\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Bedrooms\",\n      \"number\": { }\n    },\n{\n      \"name\": \"Bathrooms\",\n      \"text\": { }\n    },\n { \n    \"name\": \"image_0\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_1\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_2\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_3\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_4\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_5\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_6\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_7\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_8\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_9\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_10\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n}\n  ],\n  \"list\": {\n    \"template\": \"genericList\"\n  }\n}"},"authentication":{"value":"@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']","type":"Raw"}}}},"outputs":{}},"connectionReferences":{"shared_sharepointonline":{"connectionName":"5a68dcf636c648cea84ce80ce16eb3b3","source":"Invoker","id":"/providers/Microsoft.PowerApps/apis/shared_sharepointonline","tier":"NotSpecified"}},"flowFailureAlertSubscribed":false,"isManaged":false}}
+{
+    "name": "44db9e45-6316-468d-8951-7ac2544afa23",
+    "id": "/providers/Microsoft.Flow/flows/44db9e45-6316-468d-8951-7ac2544afa23",
+    "type": "Microsoft.Flow/flows",
+    "properties": {
+        "apiId": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+        "displayName": "Button -> Send an HTTP request to SharePoint",
+        "definition": {
+            "metadata": {
+                "workflowEntityId": null,
+                "processAdvisorMetadata": null,
+                "flowChargedByPaygo": null,
+                "flowclientsuspensionreason": "None",
+                "flowclientsuspensiontime": null,
+                "flowclientsuspensionreasondetails": null,
+                "creator": {
+                    "id": "201b9cdc-3701-4358-8151-de8e81c9e4f2",
+                    "type": "User",
+                    "tenantId": "412be96d-25c8-46fa-9676-9b68faa22272"
+                },
+                "provisioningMethod": "FromDefinition",
+                "failureAlertSubscription": true,
+                "clientLastModifiedTime": "2023-07-23T16:42:14.8240918Z"
+            },
+            "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {
+                "$connections": {
+                    "defaultValue": {},
+                    "type": "Object"
+                },
+                "$authentication": {
+                    "defaultValue": {},
+                    "type": "SecureObject"
+                }
+            },
+            "triggers": {
+                "manual": {
+                    "metadata": {
+                        "operationMetadataId": "f49febe0-4d36-44da-862f-6ce407d8353c"
+                    },
+                    "type": "Request",
+                    "kind": "Button",
+                    "inputs": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    }
+                }
+            },
+            "actions": {
+                "Send_an_HTTP_request_to_SharePoint": {
+                    "runAfter": {},
+                    "metadata": {
+                        "operationMetadataId": "ab65ce20-495c-460f-8408-c8a0f98c7dca"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                        "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                            "connectionName": "shared_sharepointonline",
+                            "operationId": "HttpRequest"
+                        },
+                        "parameters": {
+                            "dataset": "https://vgmgw.sharepoint.com/sites/Marketing",
+                            "parameters/method": "GET",
+                            "parameters/uri": "_api/site/id"
+                        },
+                        "authentication": {
+                            "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']",
+                            "type": "Raw"
+                        }
+                    }
+                },
+                "Send_an_HTTP_request_to_SharePoint_2": {
+                    "runAfter": {
+                        "Send_an_HTTP_request_to_SharePoint": [
+                            "Succeeded"
+                        ]
+                    },
+                    "metadata": {
+                        "operationMetadataId": "18683f75-f4c5-44f9-9a18-0366a0b3def9"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                        "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                            "connectionName": "shared_sharepointonline",
+                            "operationId": "HttpRequest"
+                        },
+                        "parameters": {
+                            "dataset": "https://vgmgw.sharepoint.com/sites/Marketing",
+                            "parameters/method": "POST",
+                            "parameters/uri": "/_api/v2.0/sites/@{outputs('Send_an_HTTP_request_to_SharePoint')?['body']?['d/id']}/lists/",
+                            "parameters/body": "{\n  \"displayName\": \"Test_List\",\n  \"columns\": [\n    {\n      \"name\": \"Reference\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Name\",\n      \"text\": { }\n    },\n   {\n      \"name\": \"House Name\",\n      \"text\": { }\n    },\n    { \n    \"name\": \"url\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n }\n},\n { \n    \"name\": \"Virtual Tour URL\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n { \n    \"name\": \"What3Words\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{\n      \"name\": \"Address City\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Region\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Description\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Price Type\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Price\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Address Country\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Listing Type\",\n      \"choice\": { \n\"allowTextEntry\": \"false\" ,\n      \"choices\": [\n       \"rent\",\n       \"sale\"\n ],\n\"displayAs\": \"dropDownMenu\"\n          }\n    },\n{\n      \"name\": \"Address 1\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Availability\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Latitude\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Longitude\",\n      \"text\": { }\n    },\n{\n      \"name\": \"Bedrooms\",\n      \"number\": { }\n    },\n{\n      \"name\": \"Bathrooms\",\n      \"text\": { }\n    },\n { \n    \"name\": \"image_0\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_1\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_2\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_3\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_4\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_5\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_6\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_7\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_8\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_9\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n},\n{ \n    \"name\": \"image_10\",\n    \"hyperlinkorPicture\": {\n  \"isPicture\": false\n}\n}\n  ],\n  \"list\": {\n    \"template\": \"genericList\"\n  }\n}"
+                        },
+                        "authentication": {
+                            "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']",
+                            "type": "Raw"
+                        }
+                    }
+                }
+            },
+            "outputs": {}
+        },
+        "connectionReferences": {
+            "shared_sharepointonline": {
+                "connectionName": "5a68dcf636c648cea84ce80ce16eb3b3",
+                "source": "Invoker",
+                "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                "tier": "NotSpecified"
+            }
+        },
+        "flowFailureAlertSubscribed": false,
+        "isManaged": false
+    }
+}

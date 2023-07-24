@@ -1,0 +1,27 @@
+{
+    "displayName": "Test Marketing Properties",
+    "description": "Test",
+    "columns": [
+      {
+        "name": "Reference",
+        "text": { }
+      },
+  {
+        "name": "Name",
+        "text": { }
+      },
+     {
+        "name": "House Name",
+        "text": {}
+      },
+      { 
+      "name": "url",
+      "hyperlinkorPicture": {
+    "isPicture": false
+   }
+  }   
+     ],
+    "text": {
+      "template": "genericList"
+    }
+  }

@@ -1,0 +1,164 @@
+{
+  "displayName": "Marketing Properties",
+  "Description": "List of properties for marketing",
+  "columns": [
+    {
+      "name": "Reference",
+      "text": { }
+    },
+{
+      "name": "Name",
+      "text": { }
+    },
+   {
+      "name": "House Name",
+      "text": { }
+    },
+    { 
+    "name": "url",
+    "hyperlinkorPicture": {
+  "isPicture": false
+ }
+},
+ { 
+    "name": "Virtual Tour URL",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+ { 
+    "name": "What3Words",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{
+      "name": "Address City",
+      "text": { }
+    },
+{
+      "name": "Region",
+      "text": { }
+    },
+{
+      "name": "Description",
+      "text": { }
+    },
+{
+      "name": "Price Type",
+      "text": { }
+    },
+{
+      "name": "Price",
+      "text": { }
+    },
+{
+      "name": "Address Country",
+      "text": { }
+    },
+{
+      "name": "Listing Type",
+      "choice": { 
+"allowTextEntry": "false" ,
+      "choices": [
+       "rent",
+       "sale"
+ ],
+"displayAs": "dropDownMenu",
+          }
+    },
+{
+      "name": "Address 1",
+      "text": { }
+    },
+{
+      "name": "Availability",
+      "text": { }
+    },
+{
+      "name": "Latitude",
+      "text": { }
+    },
+{
+      "name": "Longitude",
+      "text": { }
+    },
+{
+      "name": "Bedrooms",
+      "number": { }
+    },
+{
+      "name": "Bathrooms",
+      "text": { }
+    },
+ { 
+    "name": "image_0",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_1",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_2",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_3",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_4",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_5",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_6",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_7",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_8",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_9",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+},
+{ 
+    "name": "image_10",
+    "hyperlinkorPicture": {
+  "isPicture": false
+}
+}
+  ],
+  "text": {
+    "template": "genericList"
+  }
+}
