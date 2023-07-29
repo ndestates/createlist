@@ -16,21 +16,15 @@
     },
     { 
     "name": "url",
-    "hyperlinkorPicture": {
-  "isPicture": false
- }
+    "text": {}
 },
  { 
     "name": "Virtual Tour URL",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
  { 
     "name": "What3Words",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 {
       "name": "Address City",
@@ -64,7 +58,7 @@
        "rent",
        "sale"
  ],
-"displayAs": "dropDownMenu",
+"displayAs": "dropDownMenu"
           }
     },
 {
@@ -89,73 +83,51 @@
     },
 {
       "name": "Bathrooms",
-      "text": { }
+      "number": { }
     },
  { 
     "name": "image_0",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_1",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_2",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_3",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_4",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_5",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_6",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_7",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_8",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_9",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 },
 { 
     "name": "image_10",
-    "hyperlinkorPicture": {
-  "isPicture": false
-}
+    "text": {}
 }
   ],
   "text": {
