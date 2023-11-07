@@ -4,11 +4,7 @@
 
 The original Power Automate uses The original template uses the SharePoint REST API and HTTP actions to create a list in SharePoint. It is a great example of how to use the SharePoint REST API. However, the template is limited in that it does not allow you to create a list with a custom content type. The template also does not allow you to specify the list template type. This sample addresses those limitations by using the SharePoint REST API and the Send an HTTP request to SharePoint action.
 
-[INFO] [solutions] [2023-11-07T10:16:49.934Z] prompt: {"prefix":"[]: # Path: README.md\n##Create a list in Sharepoint using HTTP.\n\n#### Factors to consider\n\nThe original Power Automate ","suffix":"","prefixTokens":29,"suffixTokens":0,"isFimEnabled":false,"promptElementRanges":[{"kind":"PathMarker","start":0,"end":22},{"kind":"BeforeCursor","start":22,"end":119}]}
-[INFO] [default] [2023-11-07T10:16:49.981Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
-[INFO] [default] [2023-11-07T10:16:53.643Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 3661 ms
-[INFO] [streamChoices] [2023-11-07T10:16:59.156Z] solution 0 returned. finish reason: [stop]
-[INFO] [solutions] [2023-11-07T10:16:59.163Z] Open Copilot completion: [template is here: https://flow.microsoft.com/en-us/galleries/public/templates/9c4c2b6d8a3a4e4ba5c8c3b4f4d2b1c2/create-a-list-in-sharepoint-using-http/
+Template is here: https://flow.microsoft.com/en-us/galleries/public/templates/9c4c2b6d8a3a4e4ba5c8c3b4f4d2b1c2/create-a-list-in-sharepoint-using-http/
 
 The original template uses the SharePoint REST API and HTTP actions to create a list in SharePoint. It is a great example of how to use the SharePoint REST API. However, the template is limited in that it does not allow you to create a list with a custom content type. The template also does not allow you to specify the list template type. This sample addresses those limitations by using the SharePoint REST API and the Send an HTTP request to SharePoint action.
 
@@ -23,17 +19,7 @@ This sample requires the following:
 
 #### Solution
 
-Solution|Author(s)
---------|---------
-Provisioning.CreateListUsingHttp.json | [Microsoft](]
-[INFO] [streamChoices] [2023-11-07T10:17:06.358Z] solution 7 returned. finish reason: [stop]
-[INFO] [solutions] [2023-11-07T10:17:06.361Z] Open Copilot completion: [flow was created to create a list in Sharepoint using HTTP. It was a simple flow with no variables or conditionals. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. The flow was created to work with a Sharepoint list with no columns. The list was created with the default Title column. The flow created a list item with the default Title column. 
-
-#### Solution
-
-The solu]
-[INFO] [streamChoices] [2023-11-07T10:17:08.280Z] solution 3 returned. finish reason: [length]
-[INFO] [solutions] [2023-11-07T10:17:08.282Z] Open Copilot completion: [action to create a list in Sharepoint is very powerful and easy to use. However, when you need to create a list in Sharepoint using HTTP, you can use this example. 
+action to create a list in Sharepoint is very powerful and easy to use. However, when you need to create a list in Sharepoint using HTTP, you can use this example. 
 
 The example is based on the official documentation of Microsoft: [Create a list](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/working-with-lists-and-list-items-with-rest#creating-a-list)
 
